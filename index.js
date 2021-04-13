@@ -5,6 +5,8 @@ const { initQuestions, scorePriceQuestion, partsPriceQuestion } = require("./ass
 const { makeScoreAndPartsTemplate, makeScoreOnlyTemplate, makePartsOnlyTemplate } = require("./assets/emailTemplates.js");
 const open = require("open");
 
+console.log("[CONSOLE] : Initializing prompts...");
+
 // This prompts in the command line the questions needed to generate a POD email
 // I made this async because the two if statements try to prompt at the same time which causes some issues in inquirer
 inquirer.prompt(initQuestions)
@@ -33,6 +35,7 @@ inquirer.prompt(initQuestions)
         } else {
             emailTemplate = makeScoreOnlyTemplate(completeAnswers.customerName, completeAnswers.workComposer, completeAnswers.workTitle, completeAnswers.scorePrice);
         }
+        console.log("[CONSOLE] : Generating email template and opening default mail application...");
         // We use open here to throw out a mailto link with all the parameters that we've gotten from the inquirer questions
         open(`mailto:${completeAnswers.customerEmail}?subject=${emailSubject}&body=${emailTemplate}`);
     })
