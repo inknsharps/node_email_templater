@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This is an email template generator to help me deal with daily emails and the such.",
   "main": "index.js",
+  "bin": "index.js",
   "dependencies": {
     "dotenv": "^8.2.0",
     "inquirer": "^8.0.0",
