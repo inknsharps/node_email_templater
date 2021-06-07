@@ -8,7 +8,7 @@ This is an email template generator to help me deal with some purchase inquiry c
 
 While `nodemailer` would be a much more easier one stop option, unfortunately it did not play nicely with my office's authentication settings so opening a mailto URL was used instead. Some workarounds had to be done such as encoding the line breaks and $ characters.
 
-Standalone executables are now available in the (releases)[https://github.com/inknsharps/node_email_templater/releases/]!
+Standalone executables are now available in the [releases](https://github.com/inknsharps/node_email_templater/releases/)! Now you can just download and run the executable to make use of the program. You do not need to go through the instalation processes below, unless you want to run the program from the source files.
 
 ## Installation
 
